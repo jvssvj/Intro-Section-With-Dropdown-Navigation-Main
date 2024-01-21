@@ -34,7 +34,7 @@
 
 |||
 | :----- | :----- |
-| Solution URL: | [Frontend Mentor - Intro Section With Dropdown Navigation Main]() |
+| Solution URL: | [Frontend Mentor - Intro Section With Dropdown Navigation Main](https://www.frontendmentor.io/solutions/intro-section-with-dropdown-navigation-main-adh7LAjsvQ) |
 | Live Site URL: | <a target href="https://jvssvj.github.io/Intro-Section-With-Dropdown-Navigation-Main/" target="_blank">Intro Section With Dropdown Navigation Main</a>
 |||
 
