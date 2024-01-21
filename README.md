@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://www.frontendmentor.io/static/images/logo-mobile.svg" alt="frontendmentor" width="80">
-  <h1>Frontend Mentor - QR Code Component</h1>
-  <a href="https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H/hub"><strong>Frontend Mentor Challenge</strong></a>
+  <h1>Frontend Mentor - Intro Section With Dropdown Navigation Main</h1>
+  <a href="https://www.frontendmentor.io/challenges/intro-section-with-dropdown-navigation-ryaPetHE5"><strong>Frontend Mentor Challenge</strong></a>
 </div>
 
 <br>
@@ -23,8 +23,8 @@
 
 <div align='center'>
   <h2>Preview</h2>
-  <img src="./design/desktop-preview.jpg" alt="QR Code Component Preview">
-  <p>Design preview for the QR code Component Coding Challenge.</p>
+  <img src="./design/desktop-preview.jpg" alt="Intro Section With Dropdown Navigation Main Preview">
+  <p>Design preview for the Intro Section With Dropdown Navigation Main.</p>
 </div>
 
 <br>
@@ -34,8 +34,8 @@
 
 |||
 | :----- | :----- |
-| Solution URL: | [Frontend Mentor - QR code component](https://www.frontendmentor.io/solutions/frontend-mentor-qr-code-component-vPyueruwoI) |
-| Live Site URL: | <a target href="https://jvssvj.github.io/QR-Code-Component-Main/" target="_blank">QR-Code Component Main</a>
+| Solution URL: | [Frontend Mentor - Intro Section With Dropdown Navigation Main]() |
+| Live Site URL: | <a target href="https://jvssvj.github.io/Intro-Section-With-Dropdown-Navigation-Main/" target="_blank">Intro Section With Dropdown Navigation Main</a>
 |||
 
 <br>
@@ -44,9 +44,9 @@
 ## The Challenge
 
 Users should be able to:
-  - View the optimal layout for the app depending on their device's screen size
+  - View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
+  - View the optimal layout for the content depending on their device's screen size
   - See hover states for all interactive elements on the page
-  - Generate a new piece of advice by clicking the dice icon
 
 <br>
 
