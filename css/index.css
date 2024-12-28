@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--FontEpilogue);
+    list-style: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+:root {
+    --Almost__White: hsl(0, 0%, 98%);
+    --Medium__Gray: hsl(0, 0%, 41%);
+    --Almost__Black: hsl(0, 0%, 8%);
+    --Purple: hsl(271, 76%, 53%);
+    --FontEpilogue: 'Epilogue', sans-serif;
+    --FontSize: 1.125rem;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    font-size: var(--FontSize);
+    background-color: var(--Almost__White);
+    position: relative;
+}
+
+.overlay__menu__mobile {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.455);
+}
+
+.snap__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    margin: 1.25rem 0em;
+    padding: 0em 2.5rem;
+    position: relative;
+    gap: 3.75rem;
+    height: 44px;
+}
+
+.snap__header__menu__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 380px;
+    
+}
+
+/* Features and Company START */
+/* Features and Company START */
+.menu__nav__features__button,
+.menu__nav__company__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.menu--button--features--company {
+    font-size: .88rem;
+    color: var(--Medium__Gray);
+}
+
+.features__modal,
+.company__modal {
+    display: none;
+    flex-direction: column;
+    gap: .64em;
+    background-color: var(--Almost__White);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 1.65em;
+    border-radius: .7rem;
+    position: absolute;
+    margin-top: 2.2em;
+}
+
+.menu__features,
+.menu__company {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.menu__nav__company {
+    align-items: start;
+}
+
+.features__button,
+.company__button {
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.features__button:active,
+.company__button:active {
+    transform: scale(0.92);
+}
+
+.features__button:hover,
+.company__button:hover {
+    color: var(--Almost__Black);
+}
+
+.features--options,
+.company--options {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: .88rem;
+    color: var(--Medium__Gray);
+    transition: 0.2s ease;
+}
+
+.features--options:active,
+.company--options:active {
+    transform: scale(0.92);
+}
+/* Features and Company END */
+/* Features and Company END */
+
+
+
+/* Features Icons START */
+/* Features Icons START */
+.features__todo-list::before {
+    content: url(../images/icon-todo.svg);
+}
+
+.features__calendar::before {
+    content: url(../images/icon-calendar.svg);
+}
+
+.features__reminders::before {
+    content: url(../images/icon-reminders.svg);
+}
+
+.features__planning::before {
+    content: url(../images/icon-planning.svg);
+}
+/* Features Icons END */
+/* Features Icons END */
+
+
+
+/* Carrers and About START*/
+/* Carrers and About START*/
+.menu__nav__carrers__about {
+    display: flex;
+    align-items: center;
+    gap: 2.5em;
+}
+
+.carrers__button,
+.about__button {
+    font-size: .88rem;
+    color: var(--Medium__Gray);
+    transition: 0.2s ease;
+}
+
+.carrers__button:hover,
+.about__button:hover {
+    color: var(--Almost__Black);
+}
+
+.carrers__button:active,
+.about__button:active {
+    transform: scale(0.92);
+}
+/* Carrers and About END*/
+/* Carrers and About END*/
+
+
+
+/* Button Register and Login START */
+/* Button Register and Login START */
+.menu__nav__buttons__access {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 185px;
+    position: absolute;
+    right: 0;
+    margin-right: 2.5rem;
+}
+
+.button__register {
+    border: 2px solid var(--Medium__Gray);
+    width: 100%;
+    max-width: 105px;
+    height: 44px;
+    border-radius: .8rem;
+}
+
+.button__login,
+.button__register {
+    color: var(--Medium__Gray);
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.button__login:active,
+.button__register:active {
+    transform: scale(0.92);
+}
+
+.button__login:hover,
+.button__register:hover {
+    color: var(--Almost__Black);
+    font-weight: 700;
+    border-color: var(--Almost__Black);
+}
+/* Button Register and Login END */
+/* Button Register and Login END */
+
+
+
+/* Text Content START */
+/* Text Content START */
+.snap__content {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1148px;
+    padding: 3rem 1em 0em 1em;
+}
+
+.remote__picture {
+    max-width: 484px;
+}
+
+.snap__content__infos {
+    width: 100%;
+    max-width: 508px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+.snap__content__txt__t {
+    font-size: 4.8rem;
+    color: var(--Almost__Black);
+    width: 100%;
+    white-space: initial;
+}
+
+.snap__content__txt__p {
+    max-width: 450px;
+    color: var(--Medium__Gray);
+    margin: 3.94em 0em 3.33em 0em;
+    line-height: 1.7rem;
+}
+
+#learn--button {
+    width: 100%;
+    max-width: 164px;
+    height: 56px;
+    background-color: var(--Almost__Black);
+    color: var(--Almost__White);
+    border-radius: .8rem;
+    cursor: pointer;
+    transition: 0.2s ease;
+    border: 1px solid var(--Almost__Black);
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#learn--button:active {
+    transform: scale(0.92);
+}
+
+#learn--button:hover {
+    background-color: transparent;
+    color: var(--Almost__Black);
+}
+
+.snap__content__collaborations {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 7rem;
+    width: 100%;
+}
+
+.collaborations__item {
+    cursor: pointer;
+}
+/* Text Content END */
+/* Text Content END */
+
+
+
+.attribution {
+    position: absolute;
+    font-size: .8rem;
+    margin-top: 72em;
+    text-align: center;
+    padding: .5rem;
+    color: var(--Almost__Black);
+}
+
+.attribution a {
+    color: var(--Purple);
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+::selection {
+    background-color: var(--Almost__Black);
+    color: var(--Almost__White);
+}
+
+/* JavaScript */
+.activate__modal__features__and__company {
+    display: flex;
+    animation: company__and__features__modal .5s ease;
+}
+
+.arrow__animation__enable {
+    transition: .2s ease;
+    transform: rotate(180deg);
+}
+
+.arrow__animation__disable {
+    transition: .2s ease;
+    transform: rotate(0deg);
+}
+
+@keyframes company__and__features__modal {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.menu__buttons__open__close__mobile {
+    display: none;
+}
