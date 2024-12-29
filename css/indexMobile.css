@@ -1,3 +1,13 @@
+.overlay__menu__mobile {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--Almost__Black);
+    opacity: 0;
+}
+
 @media(max-width:1030px) {
     .snap__content {
         align-items: center;
@@ -160,18 +170,43 @@
     animation: animation__open__menu .5s ease;
 }
 
-.activate__overlay {
-    display: flex;
+.enable__overlay {
+    animation: enabled__overlay .5s ease forwards;
 }
 
-@keyframes animation__open__menu {
+.disable__overlay {
+    animation: disable__overlay .5s ease forwards;
+}
+
+@keyframes enabled__overlay {
     0% {
-        width: 0px;
         opacity: 0;
     }
 
     100% {
-        width: 240px;
+        opacity: .7;
+    }
+}
+
+@keyframes disable__overlay {
+    0% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+@keyframes animation__open__menu {
+    0% {
+        max-width: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        max-width: 240px;
         opacity: 1;
     }
 }
@@ -179,12 +214,12 @@
 @keyframes animation__close__menu {
     0% {
         display: flex;
-        width: 240px;
+        max-width: 240px;
         opacity: 1;
     }
 
     100% {
-        width: 0px;
+        max-width: 0px;
         opacity: 0;
     }
 }
