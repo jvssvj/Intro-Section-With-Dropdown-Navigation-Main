@@ -31,15 +31,6 @@ body {
     position: relative;
 }
 
-.overlay__menu__mobile {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.455);
-}
-
 .snap__header {
     display: flex;
     align-items: center;
@@ -134,30 +125,6 @@ body {
 }
 /* Features and Company END */
 /* Features and Company END */
-
-
-
-/* Features Icons START */
-/* Features Icons START */
-.features__todo-list::before {
-    content: url(../images/icon-todo.svg);
-}
-
-.features__calendar::before {
-    content: url(../images/icon-calendar.svg);
-}
-
-.features__reminders::before {
-    content: url(../images/icon-reminders.svg);
-}
-
-.features__planning::before {
-    content: url(../images/icon-planning.svg);
-}
-/* Features Icons END */
-/* Features Icons END */
-
-
 
 /* Carrers and About START*/
 /* Carrers and About START*/
@@ -332,7 +299,7 @@ body {
 /* JavaScript */
 .activate__modal__features__and__company {
     display: flex;
-    animation: company__and__features__modal .5s ease;
+    animation: company__and__features__modal .7s ease;
 }
 
 .arrow__animation__enable {
@@ -356,5 +323,15 @@ body {
 }
 
 .menu__buttons__open__close__mobile {
+    display: none;
+}
+
+.mobile--open--menu.enable,
+.mobile--close--menu.enable {
+    display: block;
+}
+
+.mobile--open--menu.disable,
+.mobile--close--menu.disable {
     display: none;
 }

@@ -1,48 +1,65 @@
-let featuresButton = document.querySelector('.menu__nav__features__button')
-let companyButton = document.querySelector('.menu__nav__company__button')
-let buttonOpenMenu = document.querySelector('.mobile--open--menu')
-let buttonCloseMenu = document.querySelector('.mobile--close--menu')
+const overlay = document.querySelector('.overlay__menu__mobile')
+const featuresButton = document.querySelector('.menu__nav__features__button')
+const companyButton = document.querySelector('.menu__nav__company__button')
+const buttonOpenMenu = document.querySelector('.mobile--open--menu')
+const buttonCloseMenu = document.querySelector('.mobile--close--menu')
+const menuModal = document.querySelector('.snap__header__menu__nav')
 
 function changeIconMenu() {
-    if(document.querySelector('.snap__header__menu__nav').classList.contains('activate__modal__menu')) {
-        buttonOpenMenu.style.display = 'none'
-        buttonCloseMenu.style.display = 'block'
-    } else {
-        buttonOpenMenu.style.display = 'block'
-        buttonCloseMenu.style.display = 'none'
-    }
+    buttonOpenMenu.addEventListener('click', () => {
+        buttonOpenMenu.classList.add('disable')
+        buttonCloseMenu.classList.add('enable')
+
+        overlay.style.display = 'block'
+        overlay.classList.remove('disable__overlay')
+        overlay.classList.add('enable__overlay')
+    })
+
+    buttonCloseMenu.addEventListener('click', () => {
+        buttonCloseMenu.classList.remove('enable')
+
+        buttonOpenMenu.classList.remove('disable')
+        buttonOpenMenu.classList.add('enable')
+
+        
+        overlay.classList.remove('enable__overlay')
+        overlay.classList.add('disable__overlay')
+
+        setTimeout(() => {
+            overlay.style.display = 'none'
+        }, 300)
+    })
 }
+
+changeIconMenu()
 
 function openCloseModalAndMenu(button, modalName, classNameinCss, arrowName, arrowAnimationEnable, arrowAnimationDisable) {
     button.addEventListener('click', () => {
-
-        changeIconMenu();
-        const modal = document.querySelector(modalName);
-        const arrow = document.querySelector(arrowName);
+        
+        const modal = document.querySelector(modalName)
+        const arrow = document.querySelector(arrowName)
         
         if (modal) {
-            modal.classList.toggle(classNameinCss);
+            modal.classList.toggle(classNameinCss)
             
             // Arrow animation START
             if (modal.classList.contains(classNameinCss)) {
                 if (arrow) {
-                    arrow.classList.add(arrowAnimationEnable);
-                    arrow.classList.remove(arrowAnimationDisable);
+                    arrow.classList.add(arrowAnimationEnable)
+                    arrow.classList.remove(arrowAnimationDisable)
                 }
             } else {
                 if (arrow) {
-                    arrow.classList.remove(arrowAnimationEnable);
-                    arrow.classList.add(arrowAnimationDisable);
+                    arrow.classList.remove(arrowAnimationEnable)
+                    arrow.classList.add(arrowAnimationDisable)
                 }
             }
             // Arrow animation END
         }
-    });
+    })
 }
 
-openCloseModalAndMenu(featuresButton, '.features__modal', 'activate__modal__features__and__company', '.features__arrow', 'arrow__animation__enable', 'arrow__animation__disable');
-openCloseModalAndMenu(companyButton, '.company__modal', 'activate__modal__features__and__company', '.company__arrow', 'arrow__animation__enable', 'arrow__animation__disable');
-openCloseModalAndMenu(buttonOpenMenu, '.snap__header__menu__nav', 'activate__modal__menu');
-openCloseModalAndMenu(buttonCloseMenu, '.snap__header__menu__nav', 'activate__modal__menu');
-openCloseModalAndMenu(buttonOpenMenu, '.overlay__menu__mobile', 'activate__overlay');
-openCloseModalAndMenu(buttonCloseMenu, '.overlay__menu__mobile', 'activate__overlay');
+openCloseModalAndMenu(featuresButton, '.features__modal', 'activate__modal__features__and__company', '.features__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
+openCloseModalAndMenu(companyButton, '.company__modal', 'activate__modal__features__and__company', '.company__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
+openCloseModalAndMenu(buttonOpenMenu, '.snap__header__menu__nav', 'activate__modal__menu')
+openCloseModalAndMenu(buttonCloseMenu, '.snap__header__menu__nav', 'activate__modal__menu')
