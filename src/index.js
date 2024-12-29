@@ -35,7 +35,6 @@ changeIconMenu()
 
 function openCloseModalAndMenu(button, modalName, classNameinCss, arrowName, arrowAnimationEnable, arrowAnimationDisable) {
     button.addEventListener('click', () => {
-
         
         const modal = document.querySelector(modalName)
         const arrow = document.querySelector(arrowName)
