@@ -33,7 +33,7 @@ function changeIconMenu() {
 
 changeIconMenu()
 
-function openCloseModalAndMenu(button, modalName, classNameinCss, arrowName, arrowAnimationEnable, arrowAnimationDisable) {
+function openCloseModal(button, modalName, classNameinCss, arrowName, arrowAnimationEnable, arrowAnimationDisable) {
     button.addEventListener('click', () => {
         
         const modal = document.querySelector(modalName)
@@ -59,7 +59,7 @@ function openCloseModalAndMenu(button, modalName, classNameinCss, arrowName, arr
     })
 }
 
-openCloseModalAndMenu(featuresButton, '.features__modal', 'activate__modal__features__and__company', '.features__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
-openCloseModalAndMenu(companyButton, '.company__modal', 'activate__modal__features__and__company', '.company__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
-openCloseModalAndMenu(buttonOpenMenu, '.snap__header__menu__nav', 'activate__modal__menu')
-openCloseModalAndMenu(buttonCloseMenu, '.snap__header__menu__nav', 'activate__modal__menu')
+openCloseModal(featuresButton, '.features__modal', 'activate__modal__features__and__company', '.features__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
+openCloseModal(companyButton, '.company__modal', 'activate__modal__features__and__company', '.company__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
+openCloseModal(buttonOpenMenu, '.snap__header__menu__nav', 'activate__modal__menu')
+openCloseModal(buttonCloseMenu, '.snap__header__menu__nav', 'activate__modal__menu')
