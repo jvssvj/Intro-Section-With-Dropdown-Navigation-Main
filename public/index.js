@@ -31,8 +31,6 @@ function changeIconMenu() {
     })
 }
 
-changeIconMenu()
-
 function openCloseModal(button, modalName, classNameinCss, arrowName, arrowAnimationEnable, arrowAnimationDisable) {
     button.addEventListener('click', () => {
         
@@ -42,7 +40,6 @@ function openCloseModal(button, modalName, classNameinCss, arrowName, arrowAnima
         if (modal) {
             modal.classList.toggle(classNameinCss)
             
-            // Arrow animation START
             if (modal.classList.contains(classNameinCss)) {
                 if (arrow) {
                     arrow.classList.add(arrowAnimationEnable)
@@ -54,8 +51,8 @@ function openCloseModal(button, modalName, classNameinCss, arrowName, arrowAnima
                     arrow.classList.add(arrowAnimationDisable)
                 }
             }
-            // Arrow animation END
         }
+
     })
 }
 
@@ -63,3 +60,4 @@ openCloseModal(featuresButton, '.features__modal', 'activate__modal__features__a
 openCloseModal(companyButton, '.company__modal', 'activate__modal__features__and__company', '.company__arrow', 'arrow__animation__enable', 'arrow__animation__disable')
 openCloseModal(buttonOpenMenu, '.snap__header__menu__nav', 'activate__modal__menu')
 openCloseModal(buttonCloseMenu, '.snap__header__menu__nav', 'activate__modal__menu')
+changeIconMenu()
